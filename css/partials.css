@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgb(248, 237, 248) 10%, rgb(204, 58, 167) 100%);
+  color: white;
+}
+
+.inner-header {
+  height: 20vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.flex img {
+  position: absolute;
+  left: 2%;
+  padding: 2%;
+  width: auto;
+  z-index: 1;
+  top: 10px;
+}
+
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.menu {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 30px;
+  font-weight: 600;
+  transition: .9s;
+}
+
+.menu a:hover {
+  letter-spacing: 2px;
+}
+
+.bar {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+.bar div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all .5s ease;
+}
+
+@media screen and (min-width:968px) {
+  .connect {
+    position: absolute;
+    right: 80px;
+  }
+}
+
+@media screen and (max-width:968px) {
+
+  .menu {
+    position: absolute;
+    right: -100%;
+    height: 90vh;
+    top: 25vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  }  
+
+  .menu li {
+    list-style: none;
+    margin-top: 60px;
+  }
+
+  .bar {
+    display: block;
+    z-index: 2;
+  }
+}
+
+.nav-active {
+  transform: translateX(-100%);
+  display: block;
+}
+
+.bar-active .bar-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.bar-active .bar-2 {
+  opacity: 0;
+}
+
+.bar-active .bar-3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.left_pane {
+  margin-left: 5%;
+  text-align: left;
+}
+
+.right_pane {
+  margin-right: 5%;
+  text-align: right;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center img {
+  margin: 0 10px;
+}
+
+.right_pane a {
+  text-decoration: none;
+}
+
+.right_pane span {
+  color: #d01b8e;
+}
+
+.right_pane span:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .left_pane,
+  .right_pane {
+    margin: -10px;
+    padding: 10px;
+  }
+
+  .left_pane {
+    order: 2;
+  }
+
+  .right_pane {
+    order: 2;
+    font-size: 10px;
+  }
+
+  .center {
+    order: 1;
+    padding-top: 5px;
+  }
+
+  .icons {
+    padding: 0px;
+    width: 15px;
+  }
+}

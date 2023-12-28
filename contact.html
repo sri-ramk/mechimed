@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/partials.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="inner-header flex">
+            <img src="img/logo.png" alt="">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="connect"><a href="contact.html">LET US CONNECT</a></li>
+                </ul>
+                <div class="bar">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </header><br><br>
+    <main>
+        <section>
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.003673373203!2d80.04049737619262!3d12.971616514875697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f4d07355bab5%3A0xbb6063169c4ed4d9!2sChennai%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1692063079125!5m2!1sen!2sin"
+          class="loc" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="contact">
+          <form id="contactForm" action="" method="post">  
+            <div class="heading">
+              <h4>Contact us</h4>
+            </div>
+            <div class="inputField">
+              <input type="name" name="name" id="name" placeholder="Your name" autocomplete="on" required>
+            </div>      
+            <div class="inputField">
+              <input type="Email" name="email" id="email" placeholder="Your email" required="" />
+            </div>      
+            <div class="inputField">
+              <textarea name="message" id="message" placeholder="Your message"></textarea>
+            </div>      
+            <div class="inputField">
+              <button type="submit" id="submit" class="btn" disabled>Submit</button>
+            </div>      
+          </form>
+        </section>      
+    </main><br><br>
+    <footer>
+        <div class="left_pane">
+            <p>Copyright &copy; 2023 CITIL - All Rights Reserved.</p>
+        </div>
+        <div class="right_pane">
+            <p>Powered by <a href="https://www.genzmarketers.in/" target="_blank"><span>Gen Z Marketers</span></a></p>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+
+        const X = () => {
+            const menu = document.querySelector('.bar');
+            const nav = document.querySelector('.menu');
+
+            menu.addEventListener('click', () => {
+                menu.classList.toggle('bar-active');
+                nav.classList.toggle('nav-active');
+            });
+
+            // Check for window resize event
+            window.addEventListener('resize', () => {
+                // Get the current window width
+                const windowWidth = window.innerWidth;
+
+                // If the window width is larger than 968px, remove the 'nav-active' class
+                if (windowWidth > 968) {
+                    nav.classList.remove('nav-active');
+                    menu.classList.remove('bar-active');
+                }
+            });
+        }
+        X();
+    </script>
+</body>
+
+</html>

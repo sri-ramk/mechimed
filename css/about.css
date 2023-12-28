@@ -1,0 +1,54 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  margin: auto;
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+section img {
+  width: 100%;
+}
+
+.title {
+  color: #d01b8e;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+@media screen and (max-width: 920px) {
+  main {
+    text-align: center;
+    justify-content: center;
+  }
+
+  section, section:nth-child(even) {
+    flex-direction: column;
+  }
+  .title, .text {
+    text-align: center;
+  }
+  .vision {
+    width: 80%;
+  }
+}

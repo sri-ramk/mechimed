@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/partials.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="inner-header flex">
+            <img src="img/logo.png" alt="">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="connect"><a href="contact.html">LET US CONNECT</a></li>
+                </ul>
+                <div class="bar">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </header><br><br>
+    <main>
+        <section>
+            <div class="left">
+                <p class="title">VISION</p><br>
+                <p class="text">At Mechimed Technologies, our mission is to simplify healthcare by designing,
+                    manufacturing, and
+                    delivering innovative medical devices and equipment. We are committed to making a positive impact on
+                    global healthcare by providing cost-effective solutions that improve patient outcomes and enhance
+                    medical practices.</p>
+            </div>
+            <div><img class="vision" src="img/vision.png" alt=""></div>
+        </section>
+        <section>
+            <div class="right">
+                <p class="title">MISSION</p><br>
+                <p class="text">To be a leading healthcare company, setting new standards in accessibility and
+                    affordability by
+                    consistently reducing the cost of medical equipment, ensuring that high-quality healthcare solutions
+                    are accessible to all.</p>
+            </div>
+            <div><img class="mission" src="img/mission.png" alt=""></div>
+        </section>
+    </main><br><br>
+    <footer>
+        <div class="left_pane">
+            <p>Copyright &copy; 2023 CITIL - All Rights Reserved.</p>
+        </div>
+        <div class="right_pane">
+            <p>Powered by <a href="https://www.genzmarketers.in/" target="_blank"><span>Gen Z Marketers</span></a></p>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+
+        const X = () => {
+            const menu = document.querySelector('.bar');
+            const nav = document.querySelector('.menu');
+
+            menu.addEventListener('click', () => {
+                menu.classList.toggle('bar-active');
+                nav.classList.toggle('nav-active');
+            });
+
+            // Check for window resize event
+            window.addEventListener('resize', () => {
+                // Get the current window width
+                const windowWidth = window.innerWidth;
+
+                // If the window width is larger than 968px, remove the 'nav-active' class
+                if (windowWidth > 968) {
+                    nav.classList.remove('nav-active');
+                    menu.classList.remove('bar-active');
+                }
+            });
+        }
+        X();
+
+    </script>
+</body>
+
+</html>

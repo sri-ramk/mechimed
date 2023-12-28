@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechimed</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/partials.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="inner-header flex">
+            <img src="img/logo.png" alt="">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="connect"><a href="contact.html">LET US CONNECT</a></li>
+                </ul>
+                <div class="bar">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </header><br><br>
+    <main>
+        <div data-aos="fade-up">
+            <video id="myVideo" onblur="this.pause()" onclick="sound()" autoplay muted loop>
+                <source src="img/promo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <section>
+            <h1 class="title" data-aos="fade-up">PRODUCTS</h1>
+            <div class="products">
+                <div class="left">
+                    <h1 class="heading" data-aos="fade-up">THEPOXY METER</h1>
+                    <img class="thepoxy_meter" src="img/thepoxy.png" alt="">
+                    <p class="text">A new diagnostic device that can measure a person’s temperature, pulse, oxygen level
+                        and perfusion index ratio</p>
+                </div>
+                <div class="right">
+                    <div>
+                        <div><img src="img/bluetooth.png" alt=""></div>
+                        <div>
+                            <p class="sub_heading" data-aos="fade-up">Bluetooth Connectivity<br><span
+                                    data-aos="fade-up">ThePoxy can be accessed by mobile phones and it shows reading in
+                                    phone</span></p>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div><img src="img/battery.png" alt=""></div>
+                        <div>
+                            <p class="sub_heading" data-aos="fade-up">Rechargable Technology<br><span
+                                    data-aos="fade-up">Thepoxy comes with battery charging technology do that no need of
+                                    charging</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div><img src="img/phone.png" alt=""></div>
+                        <div>
+                            <p class="sub_heading" data-aos="fade-up">Health Tips<br><span data-aos="fade-up">ThePoxy
+                                    interprets the reading and gives health tips</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 class="title" data-aos="fade-up">RECOGNITIONS</h1>
+            <div class="carousel">
+                <div class="carousel-item"><img src="img/1.jpg" alt=""><br>
+                    <p class="caption">WON 2 LAKHS OF GRANT AMOUNT BY IVP PROGRAMME
+                        CONDUCTED BY EDII, CHENNAI</p>
+                </div>
+                <div class="carousel-item"><img src="img/2.jpg" alt=""><br>
+                    <p class="caption">LISTED IN TOP 10 STARTUP AROUND INDIA BY LEAD
+                        COLLEGE OF MANAGEMENT, KERALA</p>
+                </div>
+                <div class="carousel-item"><img src="img/3.jpg" alt=""><br>
+                    <p class="caption">LISTED IN TOP 3 STARTUP BY SAVEETHA INSTITUTE OF
+                        MANAGEMENT, CHENNAI</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="left_pane">
+            <p>Copyright &copy; 2023 CITIL - All Rights Reserved.</p>
+        </div>
+        <!-- <div class="center">
+            <a href="https://www.linkedin.com/company/citbif/" target="_blank"><img class="icons"
+                    src="img/common/linkedin.svg" alt=""></a>
+            <a href="https://www.instagram.com/citinnovationlabs/" target="_blank"><img class="icons"
+                    src="img/common/instagram.svg" alt=""></a>
+            <a href="https://twitter.com/Cit_Inno_Labs" target="_blank"><img class="icons" src="img/common/x.svg"
+                    alt=""></a>
+        </div> -->
+        <div class="right_pane">
+            <p>Powered by <a href="https://www.genzmarketers.in/" target="_blank"><span>Gen Z Marketers</span></a></p>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+
+        const X = () => {
+            const nav = document.querySelector('.bar');
+            const menu = document.querySelector('.menu');
+
+            nav.addEventListener('click', () => {
+                nav.classList.toggle('bar-active');
+                menu.classList.toggle('nav-active');
+            });
+
+            // Check for window resize event
+            window.addEventListener('resize', () => {
+                // Get the current window width
+                const windowWidth = window.innerWidth;
+
+                // If the window width is larger than 968px, remove the 'nav-active' class
+                if (windowWidth > 968) {
+                    menu.classList.remove('nav-active');
+                    nav.classList.remove('bar-active');
+                }
+            });
+        }
+        X();
+
+        function sound() {
+            var video = document.getElementById("myVideo");
+            video.muted = !video.muted;
+        }
+
+        document.querySelectorAll(".carousel").forEach(element => {
+            const items = element.querySelectorAll(".carousel-item");
+            const buttonsHtml = Array.from(items, () => {
+                return `<span class="carousel-button"></span>`;
+            });
+
+            element.insertAdjacentHTML('beforeend', `
+        <div class="carousel-nav"> 
+            ${buttonsHtml.join("")}
+        </div>
+    `);
+
+            const buttons = element.querySelectorAll(".carousel-button");
+
+            buttons.forEach((button, i) => {
+                button.addEventListener("click", () => {
+                    items.forEach(item => item.classList.remove("item-selected"));
+                    buttons.forEach(button => button.classList.remove("button-selected"));
+
+                    items[i].classList.add("item-selected");
+                    button.classList.add("button-selected");
+                });
+            });
+
+            // Function to move to the next slide
+            const moveToNextSlide = () => {
+                let currentIndex = Array.from(items).findIndex(item => item.classList.contains("item-selected"));
+                items[currentIndex].classList.remove("item-selected");
+                buttons[currentIndex].classList.remove("button-selected");
+
+                if (currentIndex === items.length - 1) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex++;
+                }
+
+                items[currentIndex].classList.add("item-selected");
+                buttons[currentIndex].classList.add("button-selected");
+            };
+
+            // Auto carousel movement every 3 seconds
+            setInterval(moveToNextSlide, 3000);
+
+            items[0].classList.add("item-selected");
+            buttons[0].classList.add("button-selected");
+        });
+
+
+    </script>
+</body>
+
+</html>
